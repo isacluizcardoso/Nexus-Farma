@@ -1,0 +1,166 @@
+/* --- Estilos da Página de Histórico (Modo Claro) --- */
+.history-container {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.history-container h1 {
+    color: #0b6fa4; /* Azul da sua paleta */
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.purchase-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.purchase-card:hover {
+    transform: translateY(-3px);
+}
+
+.purchase-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.purchase-header h2 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.status {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+.status.delivered {
+    background-color: #28a745; /* Verde */
+}
+
+.status.processing {
+    background-color: #ffc107; /* Amarelo */
+    color: #333;
+}
+
+.date, .total {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.total {
+    font-weight: bold;
+    color: #0b6fa4; /* Azul de destaque */
+}
+
+.items-list {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 0.9rem;
+}
+
+.item-name {
+    font-weight: 500;
+}
+
+.details-btn {
+    background-color: #0b6fa4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.details-btn:hover {
+    background-color: #0880bf;
+}
+
+.back-arrow{
+    cursor: pointer;
+    padding-left: 25px;
+    background-color: #006d69;
+    border-radius: 8px;
+    border: none; border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 15px auto 0 auto; 
+    text-align: left; 
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0b6fa4;
+  color: white;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+
+.logo{
+    height: 150px;
+    max-width: 100%;
+
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .history-container h1 {
+    color: #00bfff; /* Azul-claro para destaque no Dark Mode */
+}
+
+body.dark-mode .purchase-card {
+    background-color: #1c1c1c; /* Fundo do cartão mais escuro */
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .purchase-header {
+    border-bottom-color: #333;
+}
+
+body.dark-mode .purchase-header h2 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .total {
+    color: #00bfff; /* Azul-claro de destaque */
+}
+
+body.dark-mode .items-list {
+    border-top-color: #333;
+}
+
+body.dark-mode .details-btn {
+    background-color: #0080bf;
+}
+
+body.dark-mode .details-btn:hover {
+    background-color: #0099e6;
+}

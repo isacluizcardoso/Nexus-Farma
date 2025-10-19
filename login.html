@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://i.ibb.co/Xkj2gcMW/logo-crop-removebg-preview.png" type="png">
+  <title>Login</title>
+  <link rel="stylesheet" href="csslogin.css">
+</head>
+<body>
+
+  
+<script>
+  // === 🌙 Dark Mode Persistente ===
+  if (localStorage.getItem('dark-mode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+  }
+if (localStorage.getItem('deuteranopia') === 'true') {
+  document.body.classList.add('deuteranopia');
+}
+
+</script>
+
+  <span class="back-arrow" onclick="voltarPagina()">←</span>
+
+  <div class="login-wrapper">
+    <div class="login-box">
+      <div class="user-icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="User Icon">
+      </div>
+
+      <form class="login-form">
+        <input type="text" placeholder="E-mail ou telefone" required>
+        <button type="submit">Continuar</button>
+      </form>
+
+      <a href="#" class="create-account">Criar conta</a>
+
+      <div class="divider"><span>ou</span></div>
+
+      <button class="google-login">
+        <img src="https://i.ibb.co/q2ZKVMs/google-icon.png" alt="Google">
+        Fazer Login com o Google
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const form = document.querySelector('.login-form');
+
+    function voltarPagina() {
+      window.history.back();
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const email = form.querySelector('input').value.trim();
+
+      if (!email) {
+        alert('Por favor, insira seu e-mail ou telefone.');
+        return;
+      }
+
+      // Login de teste
+      localStorage.setItem('logado', 'true');
+      localStorage.setItem('fotoPerfil', 'https://i.pravatar.cc/50');
+
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

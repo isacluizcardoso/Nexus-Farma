@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus Farma</title>
+  <link rel="icon" href="https://i.ibb.co/Xkj2gcMW/logo-crop-removebg-preview.png" type="png">
+  <link rel="stylesheet" href="css.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    #fotoPerfil {
+      position: fixed;
+      top: 20px;
+      right: 15px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: none;
+      border: 2px solid #ccc;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+
+     <script>
+  // === 🌙 Dark Mode Persistente ===
+  if (localStorage.getItem('dark-mode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+  }
+
+  // Aplica o modo salvo no site inteiro
+if (localStorage.getItem('deuteranopia') === 'true') {
+  document.body.classList.add('deuteranopia');
+}
+
+</script>
+
+
+ 
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="https://i.ibb.co/WRnvQyV/logo-nexus.png" alt="Logo Nexus Farma" class="logo">
+      </div>
+      <nav class="botoes-grid">
+        <a href="produtos.html"><img src="https://i.ibb.co/zVrRyQrp/icon-produtos.png" alt="Produtos"> Produtos</a>
+        <a href="compras.html"><img src="https://i.ibb.co/czL9c9S/icon-compras.png" alt="Compras"> Suas Compras</a>
+        <a href="acompanhar.html"><img src="https://i.ibb.co/Y4pLzgtj/icon-pedidos.png" alt="Pedidos"><em>Acompanhar <i>pedidos</i></em></a>
+        <a href="login.html"><img src="https://i.ibb.co/NgFSXCR7/icon-login.png" alt="Login"> Login</a>
+        <a href="clube.html"><img src="https://i.ibb.co/Kx18WJzw/icon-clube.png" alt="Clube"> Clube Nexus+</a>
+        <a href="config.html"><img src="https://i.ibb.co/ynGN7F0Y/icon-config.png" alt="Configurações"> Config.</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="localizacao">
+      <div class="input-cep-container">
+        <img src="https://i.ibb.co/0RZ9rjXc/icon-localizacao.png" alt="Localização">
+        <input type="text" placeholder="Digite seu CEP">
+      </div>
+    </section>
+
+    <section class="banner">
+      <img src="https://i.ibb.co/VWDPWKMk/banner-farmacia.png" alt="Imagem da farmácia">
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nexus Farma. Todos os direitos reservados.</p>
+  </footer>
+
+
+<div id="perfil-container">
+  <img id="fotoPerfil" alt="Foto de perfil">
+  <div id="menuPerfil" class="oculto">
+    <button id="logoutBtn">Sair da conta</button>
+  </div>
+</div>
+
+
+  <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const logado = localStorage.getItem('logado');
+    const foto = localStorage.getItem('fotoPerfil');
+    const img = document.getElementById('fotoPerfil');
+    const menu = document.getElementById('menuPerfil');
+    const logoutBtn = document.getElementById('logoutBtn');
+
+    if (logado === 'true' && foto) {
+      img.src = foto;
+      img.style.display = 'block';
+    }
+
+    img.addEventListener('click', (e) => {
+      e.stopPropagation();
+      menu.classList.toggle('oculto');
+    });
+
+    logoutBtn.addEventListener('click', () => {
+      localStorage.removeItem('logado');
+      localStorage.removeItem('fotoPerfil');
+      menu.classList.add('oculto');
+      window.location.href = 'login.html';
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!document.getElementById('perfil-container').contains(e.target)) {
+        menu.classList.add('oculto');
+      }
+    });
+  });
+</script>
+
+<style>
+  /* ======== FOTO ======== */
+  #perfil-container {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+  }
+
+  #fotoPerfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    display: none;
+    transition: transform 0.2s ease;
+  }
+
+  #fotoPerfil:hover {
+    transform: scale(1.05);
+  }
+
+  /* ======== MENU ======== */
+  #menuPerfil {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 5px 0;
+    z-index: 1000;
+    width: 130px;
+  }
+
+  #menuPerfil button {
+    background: none;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.2s;
+  }
+
+  #menuPerfil button:hover {
+    background-color: #f2f2f2;
+  }
+
+  .oculto {
+    display: none;
+  }
+</style>
+
+</body>
+</html>

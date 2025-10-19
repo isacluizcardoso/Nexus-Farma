@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://i.ibb.co/Xkj2gcMW/logo-crop-removebg-preview.png" type="png">
+  <title>Nexus Farma</title>
+  <link rel="stylesheet" href="produtos.css">
+</head>
+<body>
+  <header class="header">
+     <span class="back-arrow" onclick="voltarPagina()">←</span>
+    <div class="logo">💊 Nexus Farma</div>
+    <div class="search-container">
+      <input type="text" placeholder="Buscar medicamento..." >
+      <button class="search-btn">🔍</button>
+    </div>
+    
+  </header>
+  
+  <script>
+  // === 🌙 Dark Mode Persistente ===
+  if (localStorage.getItem('dark-mode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+  }
+  
+</script>
+<!-- Botão flutuante do carrinho -->
+<button id="toggleCartBtn">🛒</button>
+
+<!-- Carrinho lateral -->
+<div class="side-cart hidden">
+  <h3>Seu carrinho</h3>
+  <div class="cart-content">
+    <i class="cart-icon">🛒</i>
+    <p>Você ainda não tem nenhuma compra</p>
+    <button class="add-items-btn">Adicionar itens</button>
+  </div>
+</div>
+
+<script src="compras.js"></script>
+
+
+  <main class="product-container">
+    <div class="product-card">
+      <img src="https://www.drogariaminasbrasil.com.br/media/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/image/5566850ae/analgesico-dorflex-36-comprimidos.jpg" alt="Dorflex">
+      <div class="product-info">
+        <h2>Dorflex Analgésico e Relaxante Muscular 10 comprimidos</h2>
+        <p>Alivia dores associadas a contraturas musculares. Indicado para dor de cabeça tensional. Administração oral, fácil de tomar.</p>
+        <p><strong>Uso adulto. Consulte um médico para crianças.</strong></p>
+      </div>
+      <div class="purchase-box">
+        <p class="price">R$ 8,09</p>
+        <div class="quantity">
+          <label>Quantidade:</label>
+          <select>
+            <option>1 unidade</option>
+            <option>2 unidades</option>
+            <option>3 unidades</option>
+          </select>
+        </div>
+        <div class="options">
+          <label><input type="checkbox" checked> Compra automática</label>
+        </div>
+        <button id="buyBtn">Comprar</button>
+        <div class="message" id="message"></div>
+      </div>
+    </div>
+  </main>
+
+  
+  <footer>
+    <p>© 2025 Nexus Farma. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="produtos.js"></script>
+</body>
+</html>

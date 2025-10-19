@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://i.ibb.co/Xkj2gcMW/logo-crop-removebg-preview.png" type="png">
+  <title>Nexus Clube</title>
+  <link rel="stylesheet" href="clube.css">
+</head>
+<body>
+ 
+  
+  <script>
+  // === 🌙 Dark Mode Persistente ===
+  if (localStorage.getItem('dark-mode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+  }
+   // Aplica o modo salvo no site inteiro
+if (localStorage.getItem('deuteranopia') === 'true') {
+  document.body.classList.add('deuteranopia');
+}
+</script>
+
+
+<script src="compras.js"></script>
+
+<span class="back-arrow" onclick="voltarPagina()">←</span>
+
+ <main class="product-container">
+    <div class="product-card">
+      <div class="product-info">
+        <h2> Nexus Essencial </h2>
+        <p>R$ 9,90/mês</p>
+        <p>✅ Até 5% de desconto em compras no site da farmácia.</p>
+        <p>✅ Frete grátis em pedidos acima de R$ 99.</p>
+        <p>✅ Parcelamento em até 3x sem juros.</p>
+        <p>✅ Acesso a promoções exclusivas para assinantes.</p> 
+
+        <p>🔹 Perfeito para quem faz compras ocasionais, mas quer sempre garantir desconto e praticidade.</p>
+        <button> Assinar o Nexus Essencial </butt>
+      </div>
+      <div class="purchase-box">
+        <div class="message" id="message"></div>
+      </div>
+    </div>
+
+    <div class="product-card2">
+      <div class="product-info">
+        <h2> Nexus Premium </h2>
+        <p>R$ 29,90/mês</p>
+        <p>⭐ Até 15% de desconto em compras no site da farmácia.</p>
+        <p>⭐ Frete grátis em pedidos acima de R$ 49.</p>
+        <p>⭐ Parcelamento em até 6x sem juros.</p>
+        <p>⭐ Acesso a promoções e lançamentos exclusivos **(Priority Pass)**.</p> 
+        <p>⭐ Atendimento prioritário e consultoria farmacêutica online.</p>
+
+        <p>✨ Ideal para quem faz compras regulares e precisa do máximo de economia e conveniência.</p>
+        <button> Assinar o Nexus Premium </butt>
+      </div>
+      <div class="purchase-box">
+        <div class="message" id="message-premium"></div>
+      </div>
+    </div>
+    
+  </main>
+  
+  <footer>
+    <p>© 2025 Nexus Farma. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="clube.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.ibb.co/Xkj2gcMW/logo-crop-removebg-preview.png" type="png">
+    <title>Histórico de Compras</title>
+    <link rel="stylesheet" href="compras.css"> </head>
+<body>
+    <header class="header">
+        <span class="back-arrow" onclick="voltarPagina()">←</span>
+       <img src="https://i.ibb.co/WRnvQyV/logo-nexus.png" alt="Logo Nexus Farma" class="logo">
+        <div class="search-container">
+    <main class="history-container">
+
+
+<script>
+    // === 🌙 Dark Mode Persistente ===
+  if (localStorage.getItem('dark-mode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+  }
+</script>
+
+
+        <h1>Seu Histórico de Compras</h1>
+        
+        <div class="purchase-card">
+            <div class="purchase-header">
+                <h2>Pedido #12345</h2>
+                <span class="status delivered">Entregue</span>
+            </div>
+            <p class="date">Data da Compra: 15/09/2025</p>
+            <p class="total">Total: R$ 48,90</p>
+            <div class="items-list">
+                <div class="item">
+                    <span class="item-name">Dorflex Analgésico (10 comp.)</span>
+                    <span class="item-qty">x2</span>
+                </div>
+                <div class="item">
+                    <span class="item-name">Vitamina C (60 cáps.)</span>
+                    <span class="item-qty">x1</span>
+                </div>
+            </div>
+            <button class="details-btn">Ver Detalhes</button>
+        </div>
+
+        <div class="purchase-card">
+            <div class="purchase-header">
+                <h2>Pedido #12344</h2>
+                <span class="status delivered">Entregue</span>
+            </div>
+            <p class="date">Data da Compra: 01/10/2025</p>
+            <p class="total">Total: R$ 12,50</p>
+            <div class="items-list">
+                <div class="item">
+                    <span class="item-name">Band-Aid (10 unid.)</span>
+                    <span class="item-qty">x1</span>
+                </div>
+            </div>
+            <button class="details-btn">Ver Detalhes</button>
+        </div>
+
+        <p class="no-history-message hidden">Você ainda não realizou nenhuma compra.</p>
+    </main>
+    
+    <footer>
+        <p>© 2025 Nexus Farma. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="compras.js"></script> 
+</body>
+</html>

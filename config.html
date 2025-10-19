@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://i.ibb.co/Xkj2gcMW/logo-crop-removebg-preview.png" type="png">
+  <title>Configurações</title>
+  <link rel="stylesheet" href="config.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="header">
+      <span class="back-arrow" onclick="voltarPagina()">←</span>
+      <h2>Configurações</h2>
+    </div>
+
+    <div class="menu-item active" data-tab="notificacoes">🔔 <span>Notificações</span></div>
+    <div class="menu-item" data-tab="atividade">📈 <span>Sua atividade</span></div>
+    <div class="menu-item" data-tab="pagamentos">💳 <span>Pagamentos</span></div>
+    <div class="menu-item" data-tab="termos">📜 <span>Termos de uso</span></div>
+    <div class="menu-item" data-tab="acessibilidade">♿ <span>Acessibilidade</span></div>
+    <div class="menu-item" data-tab="conta">👤 <span>Conta do usuário</span></div>
+
+    <div class="support">
+      <strong>🧑‍💻 Suporte ao cliente</strong>
+      Clique aqui caso esteja com dúvidas ou mande mensagem no<br>
+      <a href="https://wa.me/5519999324733" target="_blank">WhatsApp: 19 99932-4733</a>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- NOTIFICAÇÕES -->
+    <div id="notificacoes" class="tab-content active">
+      <h3>Notificações</h3>
+      <p>Gerencie suas preferências de notificações.</p>
+      <form>
+        <label><input type="checkbox" checked> Receber notificações por e-mail</label><br><br>
+        <label><input type="checkbox"> Receber notificações por SMS</label><br><br>
+        <label><input type="checkbox"> Receber notificações push</label><br><br>
+        <button type="submit">Salvar preferências</button>
+      </form>
+    </div>
+
+    <!-- ATIVIDADE -->
+    <div id="atividade" class="tab-content">
+      <h3>Sua atividade</h3>
+      <p>Veja abaixo suas ações recentes:</p>
+      <ul class="activity-list">
+        <li>Login realizado em 13/10/2025 às 20:35</li>
+        <li>Alteração de senha em 10/10/2025 às 18:21</li>
+        <li>Atualização de e-mail em 07/10/2025 às 11:42</li>
+      </ul>
+    </div>
+
+    <!-- PAGAMENTOS -->
+    <div id="pagamentos" class="tab-content">
+      <h3>Pagamentos</h3>
+      <p>Informações sobre seus métodos de pagamento e histórico de compras.</p>
+
+      <form>
+        <label>Número do cartão:</label><br>
+        <input type="text" placeholder="**** **** **** 1234"><br><br>
+
+        <label>Data de validade:</label><br>
+        <input type="month"><br><br>
+
+        <label>Nome no cartão:</label><br>
+        <input type="text" placeholder="Seu nome"><br><br>
+
+        <button type="submit">Atualizar pagamento</button>
+      </form>
+    </div>
+
+    <!-- TERMOS -->
+    <div id="termos" class="tab-content">
+      <h3>Termos de uso</h3>
+      <p>Ao utilizar este serviço, você concorda com nossos termos e condições. 
+         Leia atentamente para compreender seus direitos e responsabilidades.</p>
+      <button onclick="alert('Termos aceitos!')">Aceitar Termos</button>
+    </div>
+
+   <!-- ACESSIBILIDADE -->
+<div id="acessibilidade" class="tab-content">
+  <h3>Acessibilidade</h3>
+  <p>Personalize a forma como o site é exibido para você:</p>
+
+  <label><input type="checkbox"> Alto contraste</label><br><br>
+  <label><input type="checkbox"> Aumentar tamanho do texto</label><br><br>
+  <label><input type="checkbox" id="darkModeToggle"> Ativar modo escuro</label><br><br>
+
+  <h3>Daltonismo</h3>
+  <label>
+    <input type="checkbox" id="deuteranopiaToggle">
+    Ativar modo para Deuteranopia
+  </label><br><br>
+
+  <button id="aplicarConfig">Aplicar configurações</button>
+</div>
+
+    
+    <!-- CONTA -->
+    <div id="conta" class="tab-content">
+      <h3>Conta do usuário</h3>
+      <p>Atualize suas informações pessoais abaixo:</p>
+
+      <form>
+        <label>Nome:</label><br>
+        <input type="text" value=""><br><br>
+
+        <label>E-mail:</label><br>
+        <input type="email" value=""><br><br>
+
+        <label>Senha:</label><br>
+        <input type="password" placeholder=""><br><br>
+
+        <button type="submit">Salvar alterações</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.ibb.co/Xkj2gcMW/logo-crop-removebg-preview.png" type="png">
+    <title>Rastreamento de Pedidos</title>
+    <link rel="stylesheet" href="acompanhar.css"> 
+</head>
+<body>
+    <header class="header">
+        <span class="back-arrow" onclick="voltarPagina()">←</span>
+        
+          <script>
+  // === 🌙 Dark Mode Persistente ===
+  if (localStorage.getItem('dark-mode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+  }
+
+  </script>
+
+  </header>
+    <main class="tracking-main">
+        <h1>Pedidos em Rota</h1>
+        
+        <div class="orders-list">
+            <div class="order-card" data-order-id="NF12346">
+                <div class="order-info">
+                    <h2>Pedido NF12346</h2>
+                    <p class="status-text in-transit">Em Trânsito</p>
+                    <p class="last-update">Última atualização: 18/10/2025 às 14:30</p>
+                </div>
+                <button class="track-btn">Acompanhar →</button>
+            </div>
+
+            <div class="order-card" data-order-id="NF12347">
+                <div class="order-info">
+                    <h2>Pedido NF12347</h2>
+                    <p class="status-text preparing">Preparando Envio</p>
+                    <p class="last-update">Última atualização: 19/10/2025 às 10:00</p>
+                </div>
+                <button class="track-btn">Acompanhar →</button>
+            </div>
+            
+        </div>
+    </main>
+    
+    <div class="tracking-panel hidden">
+        <div class="panel-header">
+            <h2 id="panelOrderId">Rastreamento Pedido #</h2>
+            <button id="closePanelBtn">✕</button>
+        </div>
+        <div class="timeline-container">
+            <div id="trackingTimeline">
+                </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Nexus Farma. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="acompanhar.js"></script> 
+   
+</body>
+</html>
