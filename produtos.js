@@ -9,9 +9,8 @@ document.getElementById("buyBtn").addEventListener("click", () => {
 });
 
 
-// === 🔙 Função da seta para voltar ===
 function voltarPagina() {
-  window.location.href = "index.html"; // Volta para a home
+  window.location.href = "proximas.html"; 
 }
 
 const cartPanel = document.querySelector('.side-cart');
@@ -21,3 +20,45 @@ toggleCartBtn.addEventListener('click', () => {
   cartPanel.classList.toggle('hidden');
 });
 
+const searchInput = document.getElementById('searchInput');
+const suggestions = document.getElementById('suggestions');
+
+const symptomTargets = {
+  "Dor de cabeça": "dorflex",
+  "Febre": "paracetamol",
+  "Tosse": "xarope",
+  "Cólica": "buscopan",
+  "Dores musculares": "dorflex",
+  "Congestão nasal": "neosa"
+};
+
+searchInput.addEventListener('focus', () => {
+  suggestions.classList.remove('hidden');
+});
+
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.search-container')) {
+    suggestions.classList.add('hidden');
+  }
+});
+
+function selectSuggestion(text) {
+  searchInput.value = text;
+  suggestions.classList.add('hidden');
+
+  const targetId = symptomTargets[text];
+  if (targetId) {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
+      targetElement.style.outline = "3px solid #0b6fa4";
+      targetElement.style.transition = "outline 0.3s";
+
+      setTimeout(() => {
+        targetElement.style.outline = "none";
+      }, 2000);
+    }
+  } else {
+    alert("Nenhum produto encontrado para esse sintoma.");
+  }
+}

@@ -16,6 +16,22 @@
       <button class="search-btn">🔍</button>
     </div>
     
+<div class="suggestions hidden" id="suggestions">
+  <ul>
+    <li onclick="selectSuggestion('Dor de cabeça')">Dor de cabeça</li>
+    <li onclick="selectSuggestion('Febre')">Febre</li>
+    <li onclick="selectSuggestion('Tosse')">Tosse</li>
+    <li onclick="selectSuggestion('Cólica')">Cólica</li>
+    <li onclick="selectSuggestion('Dores musculares')">Dores musculares</li>
+    <li onclick="selectSuggestion('Congestão nasal')">Congestão nasal</li>
+  </ul>
+</div>
+<div class="search-container">
+  <input type="text" placeholder="Buscar medicamento..." id="searchInput">
+  <button class="search-btn" id="searchBtn">🔍</button>
+</div>
+
+
   </header>
   
   <script>
@@ -42,7 +58,7 @@
 
 
   <main class="product-container">
-    <div class="product-card">
+    <div class="product-card" id="dorflex">
       <img src="https://www.drogariaminasbrasil.com.br/media/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/image/5566850ae/analgesico-dorflex-36-comprimidos.jpg" alt="Dorflex">
       <div class="product-info">
         <h2>Dorflex Analgésico e Relaxante Muscular 10 comprimidos</h2>
@@ -51,6 +67,64 @@
       </div>
       <div class="purchase-box">
         <p class="price">R$ 8,09</p>
+        <div class="quantity">
+          <label>Quantidade:</label>
+          <select>
+            <option>1 unidade</option>
+            <option>2 unidades</option>
+            <option>3 unidades</option>
+          </select>
+        </div>
+        <div class="options">
+          <label><input type="checkbox" checked> Compra automática</label>
+        </div>
+        <button id="buyBtn">Comprar</button>
+        <div class="message" id="message"></div>
+      </div>
+    </div>
+  </main>
+  
+  
+  
+  
+  
+  <main class="product-container">
+    <div class="product-card" id="paracetamol">
+      <img src="https://cdn.ultrafarma.com.br/static/produtos/814653/large-638847472906669531-814653_3.png" alt="Dorflex">
+      <div class="product-info">
+        <h2>Paracetamol 750mg 20 Comprimidos Prati</h2>
+        <p>O paracetamol da Prati-Donaduzzi é um medicamento analgésico e antitérmico indicado para o alívio de dores leves a moderadas e febre. Sua ação é eficaz no combate a sintomas comuns como dor de cabeça, dores musculares e estados febris associados a gripes e resfriados.</p>
+        <p><strong>Uso adulto. Consulte um médico para crianças.</strong></p>
+      </div>
+      <div class="purchase-box">
+        <p class="price">R$ 12,00</p>
+        <div class="quantity">
+          <label>Quantidade:</label>
+          <select>
+            <option>1 unidade</option>
+            <option>2 unidades</option>
+            <option>3 unidades</option>
+          </select>
+        </div>
+        <div class="options">
+          <label><input type="checkbox" checked> Compra automática</label>
+        </div>
+        <button id="buyBtn">Comprar</button>
+        <div class="message" id="message"></div>
+      </div>
+    </div>
+  </main>
+
+  <main class="product-container">
+    <div class="product-card" id="buscopan">
+      <img src="https://www.drogarianovaesperanca.com.br/imagens-complete/1000x1000/buscopan-composto-10250mg-com-20-comprimidos-9dc1a272b4.jpg" alt="Dorflex">
+      <div class="product-info">
+        <h2>Buscopan Composto 10/250mg com 20 Comprimidos</h2>
+        <p>Buscopan Composto é um medicamento para cólicas e flatulências, fabricado pelo laboratório Boehringer e comercializado em embalagem com 20 comprimidos revestidos. É recomendado para adultos, visando o tratamento de dores e desconfortos abdominais, como cólicas menstruais, estomacais, urinárias, das vias biliares, dos órgãos sexuais femininos e menstruais.</p>
+        <p><strong>Uso adulto. Consulte um médico para crianças.</strong></p>
+      </div>
+      <div class="purchase-box">
+        <p class="price">R$ 20,00</p>
         <div class="quantity">
           <label>Quantidade:</label>
           <select>

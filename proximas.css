@@ -1,0 +1,230 @@
+/* Estilos globais */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#main-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Estilo da Barra Lateral (Lista) */
+#sidebar {
+    width: 350px;
+    min-width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    border-right: 1px solid #ddd;
+    background-color: #f8f8f8; /* Fundo levemente diferente */
+}
+
+h1 {
+    color: #333;
+}
+
+/* Estilo da Área do Mapa Falso */
+#map-container {
+    flex-grow: 1; 
+    position: relative; 
+    overflow: hidden;
+    /* --- AJUSTE AQUI: Fundo sólido em vez de imagem --- */
+    background-color: #e6e6e6; /* Cor cinza clara para simular a base do mapa */
+    display: flex; /* Para centralizar se for necessário, mas aqui só serve como container */
+    justify-content: center;
+    align-items: center;
+}
+
+/* REMOVEMOS a tag <img> do HTML, então este estilo não é mais necessário,
+   mas deixamos o container com a cor de fundo. */
+/* #map-image { ... } */
+
+
+/* Estilo do Marcador Falso */
+.fake-marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #dc3545; /* Vermelho */
+    border: 3px solid #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%); 
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    transition: transform 0.2s;
+}
+
+.fake-marker:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Estilo dos itens da lista */
+.pharmacy-item {
+    padding: 12px;
+    margin-bottom: 8px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    background-color: #fff;
+}
+.pharmacy-item:hover {
+    background-color: #f6f6f6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.pharmacy-name {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.1em;
+}
+small {
+    color: #666;
+    display: block;
+    margin-top: 4px;
+}
+
+/* --- ESTILOS PADRÃO (LIGHT MODE) --- */
+
+/* Estilos globais */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333; /* Texto escuro */
+    background-color: #ffffff; /* Fundo branco */
+}
+
+#main-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Estilo da Barra Lateral (Lista) */
+#sidebar {
+    width: 350px;
+    min-width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    border-right: 1px solid #ddd;
+    background-color: #f8f8f8; /* Fundo levemente diferente */
+}
+
+h1 {
+    color: #333;
+}
+
+/* Estilo da Área do Mapa Falso */
+#map-container {
+    flex-grow: 1; 
+    position: relative; 
+    overflow: hidden;
+    background-color: #e6e6e6; /* Cor cinza clara para simular a base do mapa */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do Marcador Falso */
+.fake-marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #dc3545; /* Vermelho */
+    border: 3px solid #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%); 
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    transition: transform 0.2s;
+}
+
+.fake-marker:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Estilo dos itens da lista */
+.pharmacy-item {
+    padding: 12px;
+    margin-bottom: 8px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    background-color: #fff;
+}
+.pharmacy-item:hover {
+    background-color: #f6f6f6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.pharmacy-name {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.1em;
+}
+small {
+    color: #666;
+    display: block;
+    margin-top: 4px;
+}
+
+.back-arrow{
+    cursor: pointer;
+    padding-left: 25px;
+    background-color: #006d69;
+    border-radius: 8px;
+    border: none; border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 15px auto 0 auto; 
+    text-align: left; 
+    
+
+}
+
+
+@media (prefers-color-scheme: dark) {
+    /* Estilos globais em Dark Mode */
+    html, body {
+        color: #e0e0e0; /* Texto claro */
+        background-color: #121212; /* Fundo muito escuro */
+    }
+
+    #sidebar {
+        background-color: #1e1e1e; /* Fundo escuro da sidebar */
+        border-right: 1px solid #333;
+    }
+
+    h1 {
+        color: #ffffff; /* Títulos brancos */
+    }
+
+    /* Mapa Falso em Dark Mode */
+    #map-container {
+        background-color: #333333; /* Cor escura para a base do mapa */
+    }
+
+    /* Itens da lista em Dark Mode */
+    .pharmacy-item {
+        background-color: #2c2c2c; /* Fundo do item escuro */
+        border: 1px solid #3a3a3a;
+    }
+    .pharmacy-item:hover {
+        background-color: #3a3a3a; /* Hover mais escuro */
+        box-shadow: none;
+    }
+    .pharmacy-name {
+        color: #8ab4f8; /* Azul claro para nome */
+    }
+    small {
+        color: #aaaaaa; /* Endereço cinza claro */
+    }
+}
