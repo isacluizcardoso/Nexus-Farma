@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.ibb.co/Xkj2gcMW/logo-crop-removebg-preview.png" type="png">
+    <title>Login</title>
+    <link rel="stylesheet" href="cssentrar.css">
+</head>
+<body>
+    
+<script>
+    if (localStorage.getItem('dark-mode') === 'enabled') 
+            document.body.classList.add('dark-mode');
+   
+</script>
+
+    <span class="back-arrow" onclick="voltarPagina()">←</span>
+
+    <div class="login-wrapper">
+        <div class="login-box">
+            <div class="user-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="User Icon">
+            </div>
+
+            <form class="login-form" id="login-form">
+                <input type="text" id="email-input" placeholder="E-mail ou telefone" required>
+                
+                <input type="password" id="password-input" placeholder="Senha" required>
+                
+                <button type="submit">Entrar na Conta</button>
+            </form>
+
+            <a href="login.html" class="create-account">Criar nova conta</a>
+
+            <div class="divider"><span>ou</span></div>
+
+            <button class="google-login">
+                <img src="https://i.ibb.co/q2ZKVMs/google-icon.png" alt="Google">
+                Fazer Login com o Google
+            </button>
+        </div>
+    </div>
+    
+
+    <script>
+        const form = document.querySelector('#login-form');
+        const emailInput = document.getElementById('email-input');
+        const passwordInput = document.getElementById('password-input');
+
+        // *** IMPORTANTE: Simula o usuário já cadastrado ***
+        // Se este for o seu primeiro login, ele usará este valor.
+        const SIMULATED_SAVED_EMAIL = "teste@exemplo.com";
+        const SIMULATED_SAVED_PASSWORD = "senha123";
+
+
+        function voltarPagina() {
+            window.history.back();
+        }
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const enteredEmail = emailInput.value.trim();
+            const enteredPassword = passwordInput.value;
+            
+            // 1. Validação de Credenciais (Simulada com LocalStorage)
+            
+            // Em um cenário real, você buscaria o hash da senha no banco de dados.
+            // Aqui, comparamos com os valores simulados salvos.
+            if (enteredEmail === SIMULATED_SAVED_EMAIL && enteredPassword === SIMULATED_SAVED_PASSWORD) {
+                
+                // 2. Login BEM-SUCEDIDO
+                localStorage.setItem('logado', 'true');
+                localStorage.setItem('fotoPerfil', 'https://i.pravatar.cc/50');
+                
+                // *OPCIONAL: SALVAR EMAIL PARA FACILITAR PRÓXIMOS LOGINS*
+                // Salva o email no localStorage para pré-preencher o campo na próxima vez
+                localStorage.setItem('lastLoggedInEmail', enteredEmail); 
+                
+                alert('Login efetuado com sucesso!');
+                window.location.href = 'index.html';
+
+            } else {
+                // 3. Login FALHOU
+                alert('E-mail/Telefone ou Senha incorretos. Tente novamente.');
+            }
+        });
+        
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const lastEmail = localStorage.getItem('lastLoggedInEmail');
+            if (lastEmail) {
+                emailInput.value = lastEmail;
+            }
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,35 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Simulação de Mapa de Farmácias</title>
+    <title>Farmácias</title>
+    <link rel="icon" href="https://i.ibb.co/Xkj2gcMW/logo-crop-removebg-preview.png" type="png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="proximas.css"> 
+
+   
 </head>
 <body>
 
-<span class="back-arrow" onclick="voltarPagina()">←</span>
-
-    <script>
-  // === 🌙 Dark Mode Persistente ===
-  if (localStorage.getItem('dark-mode') === 'enabled') {
+ <script>
+        if (localStorage.getItem('dark-mode') === 'enabled') {
     document.body.classList.add('dark-mode');
   }
-  </script>
+    </script>
+
 
     <div id="main-container">
         <div id="sidebar">
-            <h1>💊 Farmácias Próximas (Simulado)</h1>
-            <p>Clique em um item ou marcador (ponto vermelho) para ver os detalhes.</p>
+            <span class="back-arrow" onclick="voltarPagina()">←</span>
+            <h1>💊 Farmácias Próximas </h1>
+            <p>Farmácias Próximas de Você.</p>
             <div id="pharmacies-list">
-                </div>
+            </div>
         </div>
         
-      <div id="map-container">
+        <div id="map-container">
             <div id="markers-area"></div>
-            <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #666;">Área de Mapa Simulado</p>
         </div>
     </div>
-
+    
     <script src="proximas.js"></script>
 </body>
 </html>

@@ -1,73 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="https://i.ibb.co/Xkj2gcMW/logo-crop-removebg-preview.png" type="png">
-  <title>Login</title>
-  <link rel="stylesheet" href="csslogin.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.ibb.co/Xkj2gcMW/logo-crop-removebg-preview.png" type="png">
+    <title>Criar Conta</title>
+    <link rel="stylesheet" href="cssentrar.css">
 </head>
 <body>
 
-  
-<script>
-  // === 🌙 Dark Mode Persistente ===
-  if (localStorage.getItem('dark-mode') === 'enabled') {
-    document.body.classList.add('dark-mode');
-  }
-if (localStorage.getItem('deuteranopia') === 'true') {
-  document.body.classList.add('deuteranopia');
-}
+    <script>
+        // === 🌙 Dark Mode Persistente ===
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+        }
+        if (localStorage.getItem('deuteranopia') === 'true') {
+            document.body.classList.add('deuteranopia');
+        }
+    </script>
 
-</script>
+    <span class="back-arrow" onclick="voltarPagina()">←</span>
 
-  <span class="back-arrow" onclick="voltarPagina()">←</span>
+    <div class="login-wrapper">
+        <div class="login-box">
+            <div class="user-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="User Icon">
+            </div>
 
-  <div class="login-wrapper">
-    <div class="login-box">
-      <div class="user-icon">
-        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="User Icon">
-      </div>
+            <form class="login-form" id="register-form">
+                <input type="text" id="email-input" placeholder="E-mail ou telefone" required>
+                
+                <input type="password" id="password-input" placeholder="Criar Senha (Mínimo de 6 caracteres)" required minlength="6">
+                
+                <input type="password" id="confirm-password-input" placeholder="Confirmar Senha" required minlength="6">
+                
+                <button type="submit">Cadastrar e Continuar</button>
+            </form>
 
-      <form class="login-form">
-        <input type="text" placeholder="E-mail ou telefone" required>
-        <button type="submit">Continuar</button>
-      </form>
+            <a href="entrar.html" class="create-account">Já tem uma conta? Fazer Login</a>
 
-      <a href="#" class="create-account">Criar conta</a>
+            <div class="divider"><span>ou</span></div>
 
-      <div class="divider"><span>ou</span></div>
-
-      <button class="google-login">
-        <img src="https://i.ibb.co/q2ZKVMs/google-icon.png" alt="Google">
-        Fazer Login com o Google
-      </button>
+            <button class="google-login">
+                <img src="https://i.ibb.co/q2ZKVMs/google-icon.png" alt="Google">
+                Cadastrar com o Google
+            </button>
+        </div>
     </div>
-  </div>
+    
 
-  <script>
-    const form = document.querySelector('.login-form');
+    <script>
+        const form = document.querySelector('#register-form');
+        const emailInput = document.getElementById('email-input');
+        const passwordInput = document.getElementById('password-input');
+        const confirmPasswordInput = document.getElementById('confirm-password-input');
 
-    function voltarPagina() {
-      window.history.back();
-    }
+        function voltarPagina() {
+            window.history.back();
+        }
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
 
-      const email = form.querySelector('input').value.trim();
+            const email = emailInput.value.trim();
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
 
-      if (!email) {
-        alert('Por favor, insira seu e-mail ou telefone.');
-        return;
-      }
+            // 1. Validação Simples
+            if (!email) {
+                alert('Por favor, insira seu e-mail ou telefone.');
+                return;
+            }
+            if (password.length < 6) {
+                alert('A senha deve ter pelo menos 6 caracteres.');
+                return;
+            }
+            
+         
+            if (password !== confirmPassword) {
+                alert('As senhas digitadas não são iguais. Por favor, confirme a senha.');
+                return;
+            }
 
-      // Login de teste
-      localStorage.setItem('logado', 'true');
-      localStorage.setItem('fotoPerfil', 'https://i.pravatar.cc/50');
+            localStorage.setItem('userEmail', email);
+            
+            localStorage.setItem('userPassword', password); 
+            localStorage.setItem('logado', 'true');
+            localStorage.setItem('fotoPerfil', 'https://i.pravatar.cc/50');
 
-      window.location.href = 'index.html';
-    });
-  </script>
+            
+            window.location.href = 'index.html';
+        });
+    </script>
+    
 </body>
 </html>

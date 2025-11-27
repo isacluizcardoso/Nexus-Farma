@@ -29,7 +29,7 @@ const symptomTargets = {
   "Tosse": "xarope",
   "Cólica": "buscopan",
   "Dores musculares": "dorflex",
-  "Congestão nasal": "neosa"
+  "Congestão nasal": "nasal"
 };
 
 searchInput.addEventListener('focus', () => {
