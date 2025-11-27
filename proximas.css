@@ -26,16 +26,27 @@ h1 {
     color: #000000;
 }
 
+/* --- PROXIMAS.CSS --- */
 
 #map-container {
     flex-grow: 1; 
     position: relative; 
     overflow: hidden;
+    
+    /* === URL EXTERNA PARA O MAPA === */
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/022/966/737/small/urban-city-map-town-streets-gps-navigation-downtown-map-with-roads-parks-and-river-abstract-roadmap-navigations-scheme-illustration-vector.jpg');
+    background-size: cover;       /* Garante que ocupe todo o espaço */
+    background-position: center;  /* Centraliza o mapa */
+    background-repeat: no-repeat; /* Evita repetição */
+    
+    /* Cor de fallback caso a imagem demore ou falhe */
     background-color: #e6e6e6; 
-    display: flex; 
+    
+    display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 
 .fake-marker {
