@@ -25,16 +25,16 @@ document.querySelectorAll('form').forEach(form => {
   });
 });
 
-// === 🌙 Dark Mode ===
+
 const darkToggle = document.getElementById('darkModeToggle');
 
-// Carregar estado do modo escuro salvo
+
 if (localStorage.getItem('dark-mode') === 'enabled') {
   document.body.classList.add('dark-mode');
   if (darkToggle) darkToggle.checked = true;
 }
 
-// Ativar/desativar dark mode
+
 if (darkToggle) {
   darkToggle.addEventListener('change', () => {
     if (darkToggle.checked) {
@@ -47,14 +47,14 @@ if (darkToggle) {
   });
 }
 
-// === 🔙 Função da seta para voltar ===
+
 function voltarPagina() {
-  window.location.href = "index.html"; // Volta para a home
+  window.location.href = "index.html"; 
 }
 
 const deuteranopiaToggle = document.getElementById('deuteranopiaToggle');
 
-// Carrega o estado salvo ao abrir a aba de config
+
 if (localStorage.getItem('deuteranopia') === 'true') {
   deuteranopiaToggle.checked = true;
   document.body.classList.add('deuteranopia');

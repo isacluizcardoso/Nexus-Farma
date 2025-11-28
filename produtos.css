@@ -1,4 +1,4 @@
-/* ======== MODO CLARO (PADRÃO) ======== */
+
   * {
     margin: 0;
     padding: 0;
@@ -24,6 +24,7 @@
   .logo {
     font-size: 1.3rem;
     font-weight: bold;
+    
   }
 
   .search-container {
@@ -157,7 +158,6 @@
       cursor: pointer;
   }
 
-  /* ======== MODO ESCURO ======== */
     body.dark-mode {
       background-color: #121212;
       color: #e0e0e0;
@@ -241,7 +241,7 @@
     transform: scale(1.05);
   }
 
-  /* ===== PAINEL DO CARRINHO ===== */
+
   .side-cart {
     position: fixed;
     top: 0;
@@ -299,14 +299,13 @@
     background-color: #e0f2f1;
   }
 
-  /* Oculto por padrão */
   .side-cart.hidden {
     transform: translateX(100%);
     opacity: 0;
     pointer-events: none;
   }
 
-  /* ====== DARK MODE ====== */
+  
   body.dark-mode #toggleCartBtn {
     background-color: #0e2c2c;
     color: #66c2c2;
@@ -336,47 +335,35 @@
   }
 
 
-  /* ======== MODO CLARO COM ADAPTAÇÃO DEUTERANOPIA ======== */
+  
   body.deuteranopia .header {
-    background-color: #0072E3; /* Azul Vívido */
+    background-color: #0072E3; 
   }
 
   body.deuteranopia .product-info h2,
   body.deuteranopia .price {
-    color: #0072E3; /* Azul Vívido */
+    color: #0072E3;
   }
 
   body.deuteranopia .purchase-box {
-    background-color: #D1E8FF; /* Azul-claro Suave */
+    background-color: #D1E8FF; 
   }
 
   body.deuteranopia button#buyBtn {
-    background-color: #0072E3; /* Azul Vívido */
+    background-color: #0072E3; 
   }
 
   body.deuteranopia footer {
-    background-color: #0072E3; /* Azul Vívido */
+    background-color: #0072E3; 
   }
 
-  /* Cores de Ação: Carrinho/Toggle (Roxo) */
   body.deuteranopia #toggleCartBtn,
   body.deuteranopia .side-cart {
-    background-color: #A900FF; /* Roxo Vibrante */
-    /* ... demais regras ... */
+    background-color: #A900FF; 
+    
   }
 
-  /* ======== MODO ESCURO COM ADAPTAÇÃO DEUTERANOPIA ======== */
-  body.dark-mode.deuteranopia  .header,
-  body.dark-mode.deuteranopia footer {
-    background-color: #003F7F; /* Azul Escuro no Dark Mode */
-  }
-
-  body.dark-mode.deuteranopia .product-info h2,
-  body.dark-mode.deuteranopia .price {
-    color: #00A9FF; /* Azul-claro para destaque */
-  }
-
-  /* Adicione as demais regras dark-mode.deuteranopia-mode */.suggestions {
+  .suggestions {
   position: absolute;
   top: 70px;
   right: 40px;
@@ -407,7 +394,6 @@
   display: none;
 }
 
-/* Dark mode compatível */
 body.dark-mode .suggestions {
   background-color: #1e1e1e;
   color: #e0e0e0;

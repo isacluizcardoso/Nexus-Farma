@@ -29,12 +29,12 @@
   <header>
 
      <script>
-  // === 🌙 Dark Mode Persistente ===
+ 
   if (localStorage.getItem('dark-mode') === 'enabled') {
     document.body.classList.add('dark-mode');
   }
 
-  // Aplica o modo salvo no site inteiro
+  
 if (localStorage.getItem('deuteranopia') === 'true') {
   document.body.classList.add('deuteranopia');
 }
@@ -66,10 +66,6 @@ if (localStorage.getItem('deuteranopia') === 'true') {
       <img src="https://i.ibb.co/VWDPWKMk/banner-farmacia.png" alt="Imagem da farmácia">
     </section>
   </main>
-
-  <footer>
-    <p>&copy; 2025 Nexus Farma. Todos os direitos reservados.</p>
-  </footer>
 
 
 <div id="perfil-container">
@@ -114,7 +110,7 @@ if (localStorage.getItem('deuteranopia') === 'true') {
 </script>
 
 <style>
-  /* ======== FOTO ======== */
+
   #perfil-container {
     position: fixed;
     top: 15px;
@@ -135,7 +131,6 @@ if (localStorage.getItem('deuteranopia') === 'true') {
     transform: scale(1.05);
   }
 
-  /* ======== MENU ======== */
   #menuPerfil {
     position: absolute;
     top: 60px;
@@ -169,6 +164,35 @@ if (localStorage.getItem('deuteranopia') === 'true') {
     display: none;
   }
 </style>
+
+<main class="product-container">
+    <div class="product-card" id="dorflex">
+        <div class="product-info">
+            <h2>O que é a Nexus Farma?</h2>
+            <p>Nexus Farma é um Site que tem como sua missão facilitar suas compras de medicamentos, o site foca em mostrar lojas próximas para uma compra mais rapida e até segura.</p>
+        </div>
+    </div>
+
+    <div class="product-card" id="dorflex2">
+        <div class="product-info">
+            <h2>Qual é nosso Objetivo?</h2>
+            <p>Nosso objetivo é facilitar as compras de medicamentos online, com um design simples, e focando em um entrega parcialmente mais rapida pelas farmácias mais próximas da sua região.</p>
+            
+        </div>
+    </div>
+
+    <div class="product-card" id="dorflex3">
+        <div class="product-info">
+            <h2>Por que escolher a Nexus?</h2>
+            <p>Um site de grande acessibilidade, simples de usar e direto, sem dificuldades em utilizar e comprar.</p>
+            
+        </div>
+    </div>
+</main>
+
+  <footer>
+    <p>&copy; 2025 Nexus Farma. Todos os direitos reservados.</p>
+  </footer>
 
 </body>
 </html>

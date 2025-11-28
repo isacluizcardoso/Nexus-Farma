@@ -1,4 +1,4 @@
-// Dados de farmácias fictícias (mantidos)
+
 const fakePharmacies = [
     { id: 101, name: "Farmacia Drogal", address: "Rua A, 123", mapX: 30, mapY: 20 },
     { id: 102, name: "Droga Raia", address: "Av. Principal, 456", mapX: 75, mapY: 55 },
@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     populateSidebarList();
 });
 
-// FUNÇÕES DE POPULAÇÃO (Mantidas)
-// ------------------------------------------------------------------
 
 function populateMarkers() {
     const markersArea = document.getElementById('markers-area');
@@ -25,7 +23,7 @@ function populateMarkers() {
         marker.style.left = `${pharmacy.mapX}%`;
         marker.style.top = `${pharmacy.mapY}%`;
         
-        // CHAMA A FUNÇÃO DE REDIRECIONAMENTO
+        
         marker.addEventListener('click', () => {
             openProdutosPage(pharmacy.name, pharmacy.id);
         });
@@ -43,7 +41,7 @@ function populateSidebarList() {
         item.innerHTML = `<div class="pharmacy-name">${pharmacy.name}</div>
                           <small>${pharmacy.address}</small>`;
                           
-        // CHAMA A FUNÇÃO DE REDIRECIONAMENTO
+        
         item.addEventListener('click', () => {
             openProdutosPage(pharmacy.name, pharmacy.id);
         });
@@ -51,24 +49,22 @@ function populateSidebarList() {
     });
 }
 
-// FUNÇÃO CHAVE PARA ABRIR A NOVA PÁGINA NA MESMA JANELA
-// ------------------------------------------------------------------
 
 /**
- * Abre o arquivo 'produtos.html' substituindo o conteúdo da página atual (mesma janela).
- * * @param {string} name Nome da farmácia.
- * @param {number} id ID da farmácia.
+ * 
+ * * @param {string} name 
+ * @param {number} id
  */
 function openProdutosPage(name, id) {
-    // Cria a URL com os parâmetros
+   
     const detailURL = `produtos.html?farmacia_id=${id}&nome=${encodeURIComponent(name)}`;
     
-    // REDIRECIONA A JANELA ATUAL para a nova URL
+    
     window.location.href = detailURL; 
 }
 
 function voltarPagina() {
-  window.location.href = "index.html"; // Volta para a home
+  window.location.href = "index.html"; 
 }
 
 

@@ -10,11 +10,8 @@
 <body>
   <header class="header">
      <span class="back-arrow" onclick="voltarPagina()">←</span>
-    <div class="logo">💊 Nexus Farma</div>
-    <div class="search-container">
-      <input type="text" placeholder="Buscar medicamento..." >
-      <button class="search-btn">🔍</button>
-    </div>
+    <div class="logo" >💊 Nexus Farma</div>
+    
     
 <div class="suggestions hidden" id="suggestions">
   <ul>
@@ -35,7 +32,7 @@
   </header>
   
   <script>
-  // === 🌙 Dark Mode Persistente ===
+  
   if (localStorage.getItem('dark-mode') === 'enabled') {
     document.body.classList.add('dark-mode');
   }
@@ -43,7 +40,7 @@
   
   
 </script>
-<!-- Botão flutuante do carrinho -->
+
 <button id="toggleCartBtn">🛒</button>
 
 <!-- Carrinho lateral -->

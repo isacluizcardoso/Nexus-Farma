@@ -1,4 +1,7 @@
-/* --- Estilos da Página de Histórico (Modo Claro) --- */
+body{
+    background: linear-gradient(rgb(255, 255, 255), #007a78);
+}
+
 .history-container {
     padding: 50px 20px;
     max-width: 800px;
@@ -102,6 +105,7 @@
     cursor: pointer;
     padding-left: 25px;
     background-color: #006d69;
+    color: white;
     border-radius: 8px;
     border: none; border-radius: 8px;
     padding: 10px 20px;
@@ -115,7 +119,7 @@
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #0b6fa4;
+  background: linear-gradient(#0b6fa4,#003552);
   color: white;
   font-size: 0.9rem;
   margin-top: 50px;
@@ -128,8 +132,10 @@ footer {
 }
 
 body.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
+   background: linear-gradient(to bottom,
+  #2a2a2a ,
+  #020202 
+);
 }
 
 body.dark-mode .history-container h1 {
@@ -163,4 +169,33 @@ body.dark-mode .details-btn {
 
 body.dark-mode .details-btn:hover {
     background-color: #0099e6;
+}
+
+.date, .total {
+    color: white;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.total {
+    font-weight: bold;
+    color: #0b6fa4; 
+}
+
+.items-list {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.item-name {
+    font-weight: 500;
 }

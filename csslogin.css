@@ -7,7 +7,7 @@
   body, html {
     height: 100%;
     font-family: Arial, sans-serif;
-    background-color: #fff;
+    background: linear-gradient(rgb(255, 255, 255), #007a78);
   }
 
   .login-wrapper {
@@ -51,8 +51,9 @@
     font-size: 16px;
     background-color: #1a73e8;
     color: white;
-    border: none;
+    border: 30px;
     border-radius: 4px;
+     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
     cursor: pointer;
   }
 
@@ -64,7 +65,7 @@
     display: block;
     margin: 10px 0;
     font-size: 14px;
-    color: #1a73e8;
+    color: #00439b;
     text-decoration: none;
   }
 
@@ -99,6 +100,7 @@
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
+     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
     cursor: pointer;
   }
 
@@ -118,8 +120,7 @@
   }
 
   body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
+    background: linear-gradient(#121212 60%, black 100%);
   }
 
   body.dark-mode .login-box {
@@ -143,10 +144,11 @@
   }
 
   body.dark-mode .login-form button {
-    background-color: #2979ff;
+    background: linear-gradient(#2979ff,#094ec4);
   }
 
   body.dark-mode .login-form button:hover {
+    transform: scale(1.01);
     background-color: #1c63d6;
   }
 

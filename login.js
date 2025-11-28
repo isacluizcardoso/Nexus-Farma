@@ -7,20 +7,44 @@ function voltarPagina() {
   window.location.href = "index.html"; 
 }
 
-const deuteranopiaToggle = document.getElementById('deuteranopiaToggle');
+const form = document.querySelector('#register-form');
+        const emailInput = document.getElementById('email-input');
+        const passwordInput = document.getElementById('password-input');
+        const confirmPasswordInput = document.getElementById('confirm-password-input');
 
-// Verifica se já estava ativo antes
-if (localStorage.getItem('deuteranopia') === 'true') {
-  deuteranopiaToggle.checked = true;
-  document.body.classList.add('deuteranopia');
-}
+          function voltarPagina() {
+              window.history.back();
+          }
 
-deuteranopiaToggle.addEventListener('change', () => {
-  if (deuteranopiaToggle.checked) {
-    document.body.classList.add('deuteranopia');
-    localStorage.setItem('deuteranopia', 'true');
-  } else {
-    document.body.classList.remove('deuteranopia');
-    localStorage.setItem('deuteranopia', 'false');
-  }
-});
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const email = emailInput.value.trim();
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+
+           
+            if (!email) {
+                alert('Por favor, insira seu e-mail ou telefone.');
+                return;
+            }
+            if (password.length < 6) {
+                alert('A senha deve ter pelo menos 6 caracteres.');
+                return;
+            }
+            
+         
+            if (password !== confirmPassword) {
+                alert('As senhas digitadas não são iguais. Por favor, confirme a senha.');
+                return;
+            }
+
+            localStorage.setItem('userEmail', email);
+            
+            localStorage.setItem('userPassword', password); 
+            localStorage.setItem('logado', 'true');
+            localStorage.setItem('fotoPerfil', 'https://i.pravatar.cc/50');
+
+            
+            window.location.href = 'continuar.html';
+        });

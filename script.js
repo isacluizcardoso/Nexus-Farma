@@ -7,7 +7,7 @@ if (localStorage.getItem('dark-mode') === 'enabled') {
 document.querySelector('.localizacao input').addEventListener('change', function () {
   alert('CEP inserido: ' + this.value);
 });
-// Modo Deuteranopia
+
 const deuteranopiaToggle = document.getElementById('deuteranopiaToggle');
 if (deuteranopiaToggle) {
   deuteranopiaToggle.addEventListener('change', () => {

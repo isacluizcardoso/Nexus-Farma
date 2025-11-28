@@ -129,18 +129,19 @@ p{
 }
 
 footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #0b6fa4;
-  color: white;
-  font-size: 0.9rem;
-  margin-top: 50px;
+   text-align: center;
+    padding: 20px;
+    background: linear-gradient(#0b6fa4,#003552);
+    color: white;
+    margin-top: 40px;
+    font-size: 14px;
 }
 
 .back-arrow{
     cursor: pointer;
     padding-left: 25px;
     background-color: #006d69;
+    color: white;
     border-radius: 8px;
     border: none; border-radius: 8px;
     padding: 10px 20px;
@@ -154,8 +155,10 @@ footer {
 }
 /* ======== MODO ESCURO ======== */
 body.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
+   background: linear-gradient(to bottom,
+  #2a2a2a ,
+  #020202 
+);
 }
 
 body.dark-mode .header {
@@ -206,5 +209,6 @@ body.dark-mode .message {
 }
 
 body.dark-mode footer {
-  background-color: #0a3d5d;
+  background: linear-gradient(#0b6fa4, #004164);
 }
+
