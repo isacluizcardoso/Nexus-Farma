@@ -5,11 +5,11 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
   }
+body {
+   
+    background: linear-gradient(rgb(255, 255, 255), #007a78);
+}
 
-  body {
-    background-color: #f6f9fc;
-    color: #333;
-  }
 
   .header {
     background-color: #0b6fa4;
@@ -67,7 +67,7 @@
   .product-card {
     display: flex;
     flex-wrap: wrap;
-    background: white;
+    background: linear-gradient(white, rgb(199, 199, 199));
     border-radius: 16px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     padding: 30px;
@@ -159,9 +159,11 @@
   }
 
     body.dark-mode {
-      background-color: #121212;
-      color: #e0e0e0;
-    }
+  background: linear-gradient(to bottom,
+  #2a2a2a 85%,
+  #020202 100%
+);
+}
 
   body.dark-mode .header {
     background-color: #0a3d5d;
@@ -184,12 +186,32 @@
   }
 
   body.dark-mode .product-card {
-    background-color: #1c1c1c;
-    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(rgb(43, 42, 42), rgb(0, 0, 0));
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 1000px;
+    transition: 0.3s;
   }
-
+  body.dark-mode .product-info {
+    flex: 1;
+    min-width: 250px;
+    color: white;
+  }
   body.dark-mode .product-info h2 {
     color: #00bfff;
+  }
+
+  body.dark-mode .options
+  {
+    color: white;
+  }
+
+  body.dark-mode .quantity
+  {
+    color: white;
   }
 
   body.dark-mode .purchase-box {

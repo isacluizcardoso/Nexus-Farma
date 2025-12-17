@@ -9,6 +9,12 @@
 </head>
 <body>
     
+<script>
+  
+  if (localStorage.getItem("darkMode") === "enabled") {
+      document.body.classList.add("dark-mode");
+  }
+</script>
 
     <span class="back-arrow" onclick="voltarPagina()">←</span>
 
@@ -36,10 +42,11 @@
             </button>
         </div>
     </div>
-    
 
+
+    <footer>
+    <p>&copy; 2025 Nexus Farma. Todos os direitos reservados.</p>
+  </footer>
     <script src=entrar.js></script>
-    
-    
 </body>
 </html>

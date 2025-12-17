@@ -1,4 +1,4 @@
-/* ======== MODO CLARO (PADRÃO) ======== */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +7,7 @@
 }
 
 body {
-  background-color: #f6f9fc;
-  color: #333;
+   background: linear-gradient(rgb(255, 255, 255), #007a78);
 }
 
 .header {
